@@ -10,4 +10,4 @@ SQLAlchemy==1.4.46
 WTForms==3.0.0
 pytest==7.2.1
 requests==2.28.2
-bootstrap-flask==2.2.0
+Werkzeug==2.0.0

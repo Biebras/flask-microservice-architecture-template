@@ -1,6 +1,6 @@
 FROM python:3.11.2-alpine3.17
 
-WORKDIR /booking/app
+WORKDIR /service_2
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt

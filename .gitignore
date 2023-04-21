@@ -1,0 +1,14 @@
+# Ignore _pycache__ folders
+**/__pycache__/
+
+# Ignore .vscode folders
+**/.vscode/
+
+# Ignore .DS_Store filrs
+**/.DS_Store
+
+#ignore db files
+#**/*.db
+
+#ignore .pytest_cache files
+**/.pytest_cache
