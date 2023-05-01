@@ -1,8 +1,10 @@
 #!/bin/bash
 
+# Run tests for each service, except main service
 pytest services/service_1/
 pytest services/service_2/
 
+# Run tests for main service
 docker build -t main-service -f ./services/main_service/Dockerfile ./services/main_service
 docker build -t service-1 -f ./services/service_1/Dockerfile ./services/service_1
 docker build -t service-2 -f ./services/service_2/Dockerfile ./services/service_2
