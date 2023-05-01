@@ -1,5 +1,11 @@
 # Flask-Microservice-Template
 
+## Architecture
+
+This architecture consists of several microservices: **service_1**, **service_2**, and **main_service**. Each of these microservices has its own **Dockerfile**, which is used to build a Docker image for that service. The services also have their own directories named **app** that contain the Python files `__init__.py` and `views.py`. Additionally, each service has a `requirements.txt` file that specifies its dependencies and a `run.py` file that starts the service.
+
+The different services are orchestrated together using a `docker-compose.yml` file in the Application directory.
+
 ## Usage
 
 To use this application, you will need to have Docker and Docker Compose installed on your system. Once you have those installed, navigate to the `Application` directory and run the `run.sh` script. This will start all the services defined in the `docker-compose.yml` file.
@@ -13,12 +19,6 @@ Here are the step-by-step instructions for using this microservice architecture:
 3. Run the `run.sh` script by typing `sh run.sh` and pressing enter. This will start all the services defined in the `docker-compose.yml` file.
 
 4. Open a web browser and navigate to `http://localhost:8000`. This will take you to the main page of the application.
-
-## Architecture
-
-This architecture consists of several microservices: **service_1**, **service_2**, and **main_service**. Each of these microservices has its own **Dockerfile**, which is used to build a Docker image for that service. The services also have their own directories named **app** that contain the Python files `__init__.py` and `views.py`. Additionally, each service has a `requirements.txt` file that specifies its dependencies and a `run.py` file that starts the service.
-
-The different services are orchestrated together using a `docker-compose.yml` file in the Application directory.
 
 ## Testing
 You can test the application by running the `test.sh` script in the `root` directory. This script will run the pytest for each service.
