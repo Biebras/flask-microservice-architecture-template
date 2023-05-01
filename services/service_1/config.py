@@ -1,5 +1,7 @@
 import os
 
+# set testing to false
+TESTING = False
 # get base direction
 basedir = os.path.abspath(os.path.dirname(__file__))
 #get db file

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  main-service:
+    image: main-service:latest
+    ports:
+      - "8000:8000"
+    command: pytest
+    depends_on:
+      - service-1
+      - service-2
+  service-1:
+    image: service-1:latest
+    ports:
+      - "8001:8001"
+  service-2:
+    image: service-2:latest
+    ports:
+      - "8002:8002"

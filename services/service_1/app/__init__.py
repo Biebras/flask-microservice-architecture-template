@@ -2,15 +2,19 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
+db = SQLAlchemy()
+migrate = Migrate()
+
 def create_app(configName='config'):
     app = Flask(__name__)
     app.config.from_object(configName)
-    db = SQLAlchemy(app)
-    Migrate(app, db, render_as_batch=True)
-    return app, db
+    db.init_app(app)
+    migrate.init_app(app, db)
+    return app
 
-app, db = create_app()
+app = create_app()
 
 from app import views
 
-db.create_all()
+with app.app_context():
+   db.create_all()
