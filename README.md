@@ -30,3 +30,6 @@ For example:
 * Container port: 8001
 * Endpoint: /service_1/api_1
 * URL: http://service-1:8001/service_1/api_1
+
+## Persistant Folder
+Each service has a persistent folder where data is stored and remains even when Docker is restarted. This means that any changes made within Docker are also reflected on the local machine.
