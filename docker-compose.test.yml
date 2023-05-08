@@ -12,7 +12,14 @@ services:
     image: service-1:latest
     ports:
       - "8001:8001"
+    command: 
   service-2:
     image: service-2:latest
     ports:
       - "8002:8002"
+    command: 
+
+    # Main goal: Run pytest for each service and main aplication
+    # Main pytest only should run after all services are up as it's dependent on them
+    # Each service can run pytest individually
+    # To start each service, you need to run python3 run.py
