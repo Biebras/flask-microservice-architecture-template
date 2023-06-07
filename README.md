@@ -21,7 +21,7 @@ This architecture consists of several microservices: `service_1`, `service_2`, a
 The different services are orchestrated together using a `docker-compose.yml` file in the Application directory.
 
 ## Testing
-You can test the application by running the `test.sh` script in the `root` directory. This script will run the pytest for each service.
+You can test each service by entering `pytest` in their each enviroment. To test the main application you need to run `test.sh` script in the `root` directory.
 
 ## Accessing External API Calls
 You can access each API by specifying docker container name, port number and endpoint. 
