@@ -38,7 +38,7 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: |
-          docker-compose -f docker-compose-nginx.yml up -d
+          docker-compose -f docker-compose-nginx.yaml up -d
           sleep 30s
           wget localhost:8000
           
